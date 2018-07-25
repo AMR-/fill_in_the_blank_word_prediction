@@ -25,23 +25,5 @@ object SentenceUtils {
 
   final def str[A](map: SortedMap[Double, A]) : String = map.foldLeft("")((acc, kv) => acc + kv.toString + "\n" )
 
-//  final def sortedMapIdComparator : Ordering[String] = 0
-//  case class SentenceIdOrder(implicit s: String) extends Ordered[String] {
-    // Greater than 0 means this > that
-//    def compare(that: String) : Int = {
-//      val s1 = this.s
-//      val s2 = that.s
-//      if (this.s == that) 0 else {
-//        val s1 = stripChars(this.s)
-//        val s2 = stripChars(that)
-//        if (s1 == s2) this.s.compareTo(that) else {
-//          s1.toInt - s2.toInt
-//        }
-//      }
-//    }
-//    private def stripChars(st: String): String = st.replaceAll("[a-zA-Z]","")
-//    private def stripChars(st: String): String = st.replaceAll("[^0-9]","")
-//  }
-
 }
 
