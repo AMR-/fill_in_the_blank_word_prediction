@@ -5,7 +5,7 @@ ignore
 src/main/resources/local.properties
 src/main/resources/AFINN
 ngram_model.ngram
-corpusfiles
+corpusfiles*
 csv_input
 csv_results
 *.iml
