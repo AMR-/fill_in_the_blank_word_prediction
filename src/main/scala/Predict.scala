@@ -5,7 +5,7 @@ import utils.SentenceUtils.{firstTwo, lastTwo}
 import utils.FileUtils.{writeMapToCsv, writeStringToFile}
 import nlp.NGramManager.{load, predict_word}
 import nlp.SentenceProcessor.getSentenceComponentsByID
-import nlp.Explain.explainPredictions
+import nlp.Explain.{explainPredictions,summarizePredictions}
 
 object Predict extends App {
   println("Predict")
@@ -15,6 +15,7 @@ object Predict extends App {
   val out_sentences_positive_filename: String = Props("output_csv_positive_filename") get
   val out_sentences_negative_filename: String = Props("output_csv_negative_filename") get
   val out_detail_filename: String = Props("output_details") get
+  val out_summary_filename: String = Props("output_summary") get
   val noPredictionPlaceholder: String = Props("no_prediction_placeholder") get
 
   load(nGramCountFilename)
@@ -49,6 +50,10 @@ object Predict extends App {
     }
   writeMapToCsv(negatives, out_sentences_negative_filename)
   println(s"Wrote negative csv file at $out_sentences_negative_filename")
+
+  val summary: String = summarizePredictions(sentencesById, negatives, positives)
+  writeStringToFile(summary, out_summary_filename)
+  println(s"Wrote summary text file at $out_summary_filename")
 
   val explanation: String = explainPredictions(sentencesById, predictions)
   writeStringToFile(explanation, out_detail_filename)

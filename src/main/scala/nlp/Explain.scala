@@ -35,6 +35,20 @@ object Explain {
     explanation toString
   }
 
+  final def summarizePredictions(sentences: Map[String, (Array[String], Array[String], Boolean)], negatives: Map[String,String], positives: Map[String,String]): String = {
+    val summary_pos: StringBuilder = StringBuilder.newBuilder
+    summary_pos.append("Positive sentences:\n")
+    val summary_neg: StringBuilder = StringBuilder.newBuilder
+    summary_neg.append("Negative sentences:\n")
+    sentences.foreach( kv => {
+      val (id: String, pre: Array[String], post: Array[String]) = (kv._1, kv._2._1, kv._2._2)
+      summary_pos.append(id + ": " + str(pre) + " " + positives(id) + " " + str(post) + "\n")
+      summary_neg.append(id + ": " + str(pre) + " " + negatives(id) + " " + str(post) + "\n")
+    }
+    )
+    summary_pos.toString + "\n" + summary_neg.toString
+  }
+
 }
 
 class MergeMap[A,B,C,D](x: Map[A,B], y: Map[A,C], f: (Option[B],Option[C]) => Option[D]) {
