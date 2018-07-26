@@ -25,7 +25,7 @@ object Explain {
         s" ${str(pre)} ${ppred prediction} ${str(post)}\n" +
         s"Additional considered options:\n")
       explanation append str(ppred details)
-      explanation append(s"\nTop positive prediction (${npred prediction}):\n" +
+      explanation append(s"\nTop negative prediction (${npred prediction}):\n" +
         s" ${str(pre)} ${npred prediction} ${str(post)}\n" +
         s"Additional considered options:\n")
       explanation append str(npred details)
