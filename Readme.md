@@ -63,9 +63,9 @@ To run a prediction to fill in the blank on the provided sentence stems, run
 
 Although you can use any corpus and AFINN-formatted you desire, we describe here what worked well for us.
 
-For the corpus, we used retrieved data from the IMSDb corpus, which has movie scripts available for research purposes.  We are grateful to the work done by Marylin A. Walker et al in making the `Film Corpus 1.0` available.  Learn more at [https://nlds.soe.ucsc.edu/fc]. Note that if you also draw from this database they ask you to cite two of their papers.
+For the corpus, we used retrieved data from the IMSDb corpus, which has movie scripts available for research purposes.  We are grateful to the work done by Marylin A. Walker et al in making the `Film Corpus 1.0` available.  Learn more at https://nlds.soe.ucsc.edu/fc. Note that if you also draw from this database they ask you to cite two of their papers.
 
-For the AFFIN-formatted files, we used AFFIN files labeled by Finn Årup Nielsen.  Learn more at [http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010].  Note that if you use their AFFIN files, they ask you to cite a paper listed there.
+For the AFFIN-formatted files, we used AFFIN files labeled by Finn Årup Nielsen.  Learn more at http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010.  Note that if you use their AFFIN files, they ask you to cite a paper listed there.
 
 <a name="Explanation"></a>
 # Explanation of How it Works
