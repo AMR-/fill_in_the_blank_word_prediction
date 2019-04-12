@@ -32,20 +32,20 @@ Training Settings:
 
 Prediction Settings:
 * **ngram_weightings** : four values weighting the forward bigram, reverse bigram, forward trigram, and reverse trigram components of the predictor
-* **affect_weighting** : how much weight to give the affect weighting
+* **affect_weighting** : how much weight to give the affect component of the predictor
 * **ignore_words** : words to ignore as a _result_. For example, 'kill' is a very negative word, and it might appear in natural language enough that you don't want to add it to **stop_words**, but it may be the case that you also don't want your robot to choose that particular word.
 * **input_csv_filename** : the relative path to the neutral sentences stems
-* **output_csv_positive_filename=csv_results/positive.csv** : output file for positive fill-in-the-blanks
-* **output_csv_negative_filename=csv_results/negative.csv** : output file for negative-fill-in-the-blanks
-* **output_details=csv_results/details.txt** : output file for more detailed information
-* **output_summary=csv_results/summary.txt** : output file for summary information
+* **output_csv_positive_filename** : output file for positive fill-in-the-blanks
+* **output_csv_negative_filename** : output file for negative-fill-in-the-blanks
+* **output_details** : output file for more detailed information
+* **output_summary** : output file for summary information
 
 <a name="Formatting"></a>
 # How training data should be formatted
 
 Training corpus for natural language (which by default should be placed into the `corpusfiles` directory) can be any format.  Some preprocessing is done to remove punctuation as such.  It is expected to take in movie scripts.  It can handle anything, although if you use other formats it is recommended to do some preprocessing yourself if you want to be sure.
 
-The AFINN files note what emotional valence different words have.  The format is a two-column tab-separated file, where the first column is the word, and the second column is a number from -5 to 5. (Positive is positive valence.)
+The AFINN files note what emotional valence different words have.  You can have multiple files, be sure to list them in the **afinn_file** property.  The format is a two-column tab-separated file, where the first column is the word, and the second column is a number from -5 to 5. (Positive is positive valence.)
 
 <a name="TrainingAndPredicting"></a>
 # Training and Predicting
