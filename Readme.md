@@ -76,7 +76,7 @@ An N-gram model trains on corpora and counts how often each word follows each pr
 
 ![equation 1](images/eqn1.png)
 
-where ![$P(w_n | w_{n-(N-1)}, ..., w_{n-1})$](images/eqn1-prob.png) is the probability that a particular word *w<sub>n</sub>* follows a particular sequence of *N* other words, and _*w_ is a wildcard meaning ''any word observed as completing this sequence''.  In our usage, as shown, we add _+α_ and _+Dα_ terms as Laplacian smoothing to account for situations where a word was not observed. We use α=1 and D= (number of words that could fit *$w$ for the given preceding sequence).
+where ![$P(w_n | w_{n-(N-1)}, ..., w_{n-1})$](images/eqn1-prob.png) is the probability that a particular word *w<sub>n</sub>* follows a particular sequence of *N* other words, and _*w_ is a wildcard meaning ''any word observed as completing this sequence''.  In our usage, as shown, we add _+α_ and _+Dα_ terms as Laplacian smoothing to account for situations where a word was not observed. We use α=1 and D=(number of words that could fit _*w_ for the given preceding sequence).
 
 To make the language not just natural but connoting a specific emotion (''affect-aware''), we took advantage of the AFINN Affect Dictionary, which rates the emotional valence of a word on a scale from -5 to 5.
 
