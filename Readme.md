@@ -95,3 +95,6 @@ We trained our model on transcripts of popular films from the IMSDb archive, but
 
 This library was created by Aaron M. Roth, based in part on python code written by Tamara Amin.
 
+If you use it, please cite the following paper:
+
+Aaron M. Roth, Samantha Reig, Umang Bhatt, Jonathan Shulgach, Tamara Amin, Afsaneh Doryab, Fei Fang, and Manuela Veloso “A Robot’s Expressive Language Affects Human Strategy and Perceptions in a Competitive Game” _IEEE International Conference on Robot & Human Interactive Communication (RO-MAN)_, 2019
