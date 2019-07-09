@@ -97,4 +97,4 @@ This library was created by Aaron M. Roth, based in part on python code written 
 
 If you use it, please cite the following paper:
 
-Aaron M. Roth, Samantha Reig, Umang Bhatt, Jonathan Shulgach, Tamara Amin, Afsaneh Doryab, Fei Fang, and Manuela Veloso “A Robot’s Expressive Language Affects Human Strategy and Perceptions in a Competitive Game” _IEEE International Conference on Robot & Human Interactive Communication (RO-MAN)_, 2019
+Aaron M. Roth, Samantha Reig, Umang Bhatt, Jonathan Shulgach, Tamara Amin, Afsaneh Doryab, Fei Fang, and Manuela Veloso “A Robot’s Expressive Language Affects Human Strategy and Perceptions in a Competitive Game” _Proceedings of the 28th IEEE International Conference on Robot & Human Interactive Communication (RO-MAN)_, 2019
